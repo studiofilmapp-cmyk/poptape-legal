@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poptape — 오픈소스 라이선스</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.7;
+    color: #1a1a1a;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 48px 20px 80px; }
+  h1 { font-size: 26px; font-weight: 700; margin: 0 0 8px; }
+  .updated { color: #888; font-size: 14px; margin: 0 0 32px; }
+  h2 { font-size: 20px; font-weight: 700; margin: 40px 0 12px; padding-top: 12px; border-top: 1px solid #eee; }
+  h3 { font-size: 16px; font-weight: 600; margin: 24px 0 8px; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 20px; }
+  li { margin: 4px 0; }
+  a { color: #2563eb; text-decoration: none; word-break: break-all; }
+  a:hover { text-decoration: underline; }
+  code { background: #f3f3f3; padding: 1px 5px; border-radius: 4px; font-size: 13px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  pre { background: #f6f6f6; border: 1px solid #eaeaea; border-radius: 8px; padding: 14px 16px; overflow-x: auto; font-size: 12.5px; line-height: 1.5; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: #333; }
+  .muted { color: #666; font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; margin: 0 0 16px; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #eee; vertical-align: top; }
+  th { font-weight: 600; color: #444; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #121212; color: #e6e6e6; }
+    h2 { border-top-color: #2a2a2a; }
+    .updated, .muted { color: #999; }
+    a { color: #6ea8fe; }
+    code { background: #1f1f1f; }
+    pre { background: #1a1a1a; border-color: #2a2a2a; color: #ccc; }
+    th { color: #bbb; }
+    th, td { border-bottom-color: #2a2a2a; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>오픈소스 라이선스</h1>
+<p class="updated">Poptape · 최종 업데이트: 2026년 6월</p>
+
+<p>Poptape는 다음의 오픈소스 소프트웨어와 글꼴을 사용하여 만들어졌습니다. 각 구성요소의 저작권은 해당 권리자에게 있으며, Poptape는 아래 라이선스 조건에 따라 이를 사용합니다.</p>
+
+<!-- ============ FFmpeg / FFmpeg-kit (LGPL) ============ -->
+<h2>1. FFmpeg / FFmpeg-kit (LGPL)</h2>
+<p>Poptape는 영상 처리를 위해 FFmpeg 및 FFmpeg-kit Flutter 래퍼를 사용합니다.</p>
+<ul>
+  <li>패키지: <code>ffmpeg_kit_flutter_new_full</code> 2.1.0</li>
+  <li>FFmpeg 버전: 8.0.0 (비-GPL / LGPL 빌드)</li>
+  <li>래퍼: sk3llo/ffmpeg_kit_flutter (arthenica/ffmpeg-kit 포크), LGPL v3.0</li>
+</ul>
+<p>Poptape가 사용하는 빌드는 <strong>GPL 구성요소를 포함하지 않는 비-GPL(LGPL) 빌드</strong>입니다. (x264·x265·xvidcore·vid.stab 등 GPL 라이브러리는 포함되지 않습니다.)</p>
+
+<h3>LGPL 준수 사항</h3>
+<ul>
+  <li><strong>수정 여부:</strong> Poptape는 FFmpeg 및 FFmpeg-kit를 수정하지 않고 그대로 사용합니다.</li>
+  <li><strong>동적 링크:</strong> FFmpeg 라이브러리는 동적 프레임워크(<code>.framework</code>)로 탑재되어 있어, 사용자가 라이브러리를 교체·재링크할 수 있습니다.</li>
+  <li><strong>대응 소스:</strong> 사용된 정확한 버전의 소스 코드는 아래에서 확인할 수 있습니다.</li>
+</ul>
+
+<h3>소스 코드 및 라이선스 전문</h3>
+<ul>
+  <li>FFmpeg 8.0 소스: <a href="https://github.com/FFmpeg/FFmpeg/releases/tag/n8.0">github.com/FFmpeg/FFmpeg (tag n8.0)</a></li>
+  <li>FFmpeg-kit 래퍼/빌드 스크립트: <a href="https://github.com/sk3llo/ffmpeg_kit_flutter">github.com/sk3llo/ffmpeg_kit_flutter</a></li>
+  <li>LGPL v3.0 전문: <a href="https://www.gnu.org/licenses/lgpl-3.0.html">gnu.org/licenses/lgpl-3.0.html</a></li>
+  <li>LGPL v2.1 전문: <a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">gnu.org/licenses/old-licenses/lgpl-2.1.html</a></li>
+</ul>
+
+<h3>FFmpeg가 포함하는 외부 라이브러리</h3>
+<p class="muted">FFmpeg full 빌드는 다음 라이브러리를 포함하며, 각각 permissive 또는 LGPL 라이선스를 따릅니다: dav1d, opus, libvpx, libwebp, libvorbis, libtheora, snappy, speex (BSD) · fontconfig, libxml2 (MIT) · libass (ISC) · freetype (FTL) · fribidi, gmp, gnutls, lame, shine, soxr, twolame, libiconv (LGPL) · opencore-amr, vo-amrwbenc (Apache) · kvazaar (BSD) · zimg (permissive) 등. 전체 목록과 각 라이선스는 <a href="https://github.com/sk3llo/ffmpeg_kit_flutter">FFmpeg-kit 저장소</a>를 참고하십시오.</p>
+
+<!-- ============ 글꼴 (OFL) ============ -->
+<h2>2. 글꼴 (SIL Open Font License 1.1)</h2>
+<p>Poptape는 다음 글꼴을 SIL Open Font License 1.1에 따라 사용합니다. 라이선스 전문은 <a href="https://openfontlicense.org/">openfontlicense.org</a>에서 확인할 수 있습니다.</p>
+<ul>
+  <li>Pretendard</li>
+  <li>VT323</li>
+  <li>Silkscreen</li>
+  <li>Anton</li>
+  <li>Playfair Display</li>
+  <li>Bungee</li>
+  <li>Rye</li>
+  <li>Shrikhand</li>
+  <li>Black Han Sans</li>
+  <li>Jua</li>
+  <li>나눔명조 (NanumMyeongjo)</li>
+  <li>Gugi</li>
+  <li>도현 (DoHyeon)</li>
+  <li>Galmuri11</li>
+  <li>NeoDunggeunmo (둥근모꼴)</li>
+</ul>
+
+<h3>나눔스퀘어 네오 (NanumSquareNeo)</h3>
+<p>저작권: (주)네이버 (NAVER Corp.) · 제작: 네이버 · 산돌</p>
+<p>네이버 나눔스퀘어 네오는 무료로 배포되는 오픈라이선스 글꼴로, 개인 및 기업 사용자 모두가 영리적·비영리적 목적으로 자유롭게 사용할 수 있습니다. 모든 나눔스퀘어 서체의 지식재산권은 (주)네이버에 있으며, 글꼴 파일은 유료로 판매할 수 없습니다.</p>
+<p class="muted">출처: <a href="https://hangeul.naver.com/font">hangeul.naver.com/font</a></p>
+
+<h3>Cafe24 Ssurround</h3>
+<p>Cafe24 무료 글꼴 라이선스에 따라 사용합니다. 저작권은 Cafe24 Corp.에 있으며 자유롭게 사용할 수 있습니다.</p>
+
+<!-- ============ UI 컴포넌트 (MIT) ============ -->
+<h2>3. UI 컴포넌트 (MIT License)</h2>
+<p>일부 버튼·체크박스 디자인은 <a href="https://uiverse.io">Uiverse.io</a>의 오픈소스 컴포넌트를 Flutter로 재구현한 것입니다.</p>
+<ul>
+  <li>버튼 디자인 — © sahilxkhadka (<a href="https://uiverse.io/sahilxkhadka">uiverse.io/sahilxkhadka</a>)</li>
+  <li>체크박스 디자인 — © Praashoo7 (<a href="https://uiverse.io/Praashoo7">uiverse.io/Praashoo7</a>)</li>
+</ul>
+<p>위 컴포넌트는 MIT License에 따라 사용됩니다.</p>
+<pre>MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</pre>
+
+<!-- ============ 소프트웨어 패키지 ============ -->
+<h2>4. 소프트웨어 패키지</h2>
+<p>Poptape는 다음의 오픈소스 패키지를 사용합니다.</p>
+
+<h3>BSD-3-Clause License</h3>
+<p class="muted">Flutter SDK, camera, video_player, path_provider, crypto, google_sign_in, url_launcher, package_info_plus, sensors_plus, connectivity_plus, share_plus</p>
+
+<h3>MIT License</h3>
+<p class="muted">supabase_flutter (postgrest, gotrue, storage, realtime, functions_client 포함), sign_in_with_apple, app_links, gal, cupertino_icons</p>
+
+<p>위 패키지 및 그 전이 의존성(transitive dependencies)의 전체 라이선스 목록은 앱 내 <strong>설정 → 정보 → 라이선스</strong>에서도 확인할 수 있습니다.</p>
+
+<!-- ============ 에셋 ============ -->
+<h2>5. 이미지 및 기타</h2>
+<ul>
+  <li>아바타·로고·앱 아이콘·스티커·텍스처 이미지는 Poptape가 자체 제작한 것입니다.</li>
+  <li>색 처리 연구에 ntsc-rs(ISC/MIT) 프로젝트를 참고했습니다. (코드는 포함되지 않음)</li>
+</ul>
+
+<p class="muted" style="margin-top:40px;">문의: <a href="mailto:studiofilm.app@gmail.com">studiofilm.app@gmail.com</a></p>
+
+</div>
+</body>
+</html>
