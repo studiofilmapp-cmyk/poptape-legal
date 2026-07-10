@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poptape — Open Source Licenses</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.7;
+    color: #1a1a1a;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 48px 20px 80px; }
+  h1 { font-size: 26px; font-weight: 700; margin: 0 0 8px; }
+  .updated { color: #888; font-size: 14px; margin: 0 0 8px; }
+  .lang { text-align: right; margin: 0 0 24px; font-size: 14px; }
+  h2 { font-size: 20px; font-weight: 700; margin: 40px 0 12px; padding-top: 12px; border-top: 1px solid #eee; }
+  h3 { font-size: 16px; font-weight: 600; margin: 24px 0 8px; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 20px; }
+  li { margin: 4px 0; }
+  a { color: #2563eb; text-decoration: none; word-break: break-all; }
+  a:hover { text-decoration: underline; }
+  code { background: #f3f3f3; padding: 1px 5px; border-radius: 4px; font-size: 13px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  pre { background: #f6f6f6; border: 1px solid #eaeaea; border-radius: 8px; padding: 14px 16px; overflow-x: auto; font-size: 12.5px; line-height: 1.5; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: #333; }
+  .muted { color: #666; font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; margin: 0 0 16px; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #eee; vertical-align: top; }
+  th { font-weight: 600; color: #444; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #121212; color: #e6e6e6; }
+    h2 { border-top-color: #2a2a2a; }
+    .updated, .muted { color: #999; }
+    a { color: #6ea8fe; }
+    code { background: #1f1f1f; }
+    pre { background: #1a1a1a; border-color: #2a2a2a; color: #ccc; }
+    th { color: #bbb; }
+    th, td { border-bottom-color: #2a2a2a; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<p class="lang"><a href="open-source.html">한국어</a></p>
+<h1>Open Source Licenses</h1>
+<p class="updated">Poptape · Last updated: June 2026</p>
+
+<p>Poptape is built using the following open source software and fonts. Copyright in each component belongs to its respective rights holder, and Poptape uses them under the license terms below.</p>
+
+<!-- ============ FFmpeg / FFmpeg-kit (LGPL) ============ -->
+<h2>1. FFmpeg / FFmpeg-kit (LGPL)</h2>
+<p>Poptape uses FFmpeg and the FFmpeg-kit Flutter wrapper for video processing.</p>
+<ul>
+  <li>Package: <code>ffmpeg_kit_flutter_new_full</code> 2.1.0</li>
+  <li>FFmpeg version: 8.0.0 (non-GPL / LGPL build)</li>
+  <li>Wrapper: sk3llo/ffmpeg_kit_flutter (a fork of arthenica/ffmpeg-kit), LGPL v3.0</li>
+</ul>
+<p>The build Poptape uses is a <strong>non-GPL (LGPL) build that contains no GPL components</strong>. (GPL libraries such as x264, x265, xvidcore, and vid.stab are not included.)</p>
+
+<h3>LGPL Compliance</h3>
+<ul>
+  <li><strong>Modifications:</strong> Poptape uses FFmpeg and FFmpeg-kit unmodified.</li>
+  <li><strong>Dynamic linking:</strong> The FFmpeg libraries are embedded as dynamic frameworks (<code>.framework</code>), so users can replace or re-link the libraries.</li>
+  <li><strong>Corresponding source:</strong> The exact source code for the version used is available below.</li>
+</ul>
+
+<h3>Source Code and Full License Text</h3>
+<ul>
+  <li>FFmpeg 8.0 source: <a href="https://github.com/FFmpeg/FFmpeg/releases/tag/n8.0">github.com/FFmpeg/FFmpeg (tag n8.0)</a></li>
+  <li>FFmpeg-kit wrapper / build scripts: <a href="https://github.com/sk3llo/ffmpeg_kit_flutter">github.com/sk3llo/ffmpeg_kit_flutter</a></li>
+  <li>LGPL v3.0 full text: <a href="https://www.gnu.org/licenses/lgpl-3.0.html">gnu.org/licenses/lgpl-3.0.html</a></li>
+  <li>LGPL v2.1 full text: <a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">gnu.org/licenses/old-licenses/lgpl-2.1.html</a></li>
+</ul>
+
+<h3>External libraries bundled with FFmpeg</h3>
+<p class="muted">The FFmpeg full build includes the following libraries, each under a permissive or LGPL license: dav1d, opus, libvpx, libwebp, libvorbis, libtheora, snappy, speex (BSD) · fontconfig, libxml2 (MIT) · libass (ISC) · freetype (FTL) · fribidi, gmp, gnutls, lame, shine, soxr, twolame, libiconv (LGPL) · opencore-amr, vo-amrwbenc (Apache) · kvazaar (BSD) · zimg (permissive), and others. See the <a href="https://github.com/sk3llo/ffmpeg_kit_flutter">FFmpeg-kit repository</a> for the full list and each license.</p>
+
+<!-- ============ Fonts (OFL) ============ -->
+<h2>2. Fonts (SIL Open Font License 1.1)</h2>
+<p>Poptape uses the following fonts under the SIL Open Font License 1.1. The full license text is available at <a href="https://openfontlicense.org/">openfontlicense.org</a>.</p>
+<ul>
+  <li>Pretendard</li>
+  <li>VT323</li>
+  <li>Silkscreen</li>
+  <li>Anton</li>
+  <li>Playfair Display</li>
+  <li>Bungee</li>
+  <li>Rye</li>
+  <li>Shrikhand</li>
+  <li>Black Han Sans</li>
+  <li>Jua</li>
+  <li>NanumMyeongjo (나눔명조)</li>
+  <li>Gugi</li>
+  <li>DoHyeon (도현)</li>
+  <li>Galmuri11</li>
+  <li>NeoDunggeunmo (둥근모꼴)</li>
+</ul>
+
+<h3>NanumSquareNeo</h3>
+<p>Copyright: NAVER Corp. · Produced by: NAVER · Sandoll</p>
+<p>NAVER NanumSquareNeo is a free, openly licensed font that both individuals and businesses may use freely for commercial and non-commercial purposes. Intellectual property rights to all Nanum Square typefaces belong to NAVER Corp., and the font files may not be sold.</p>
+<p class="muted">Source: <a href="https://hangeul.naver.com/font">hangeul.naver.com/font</a></p>
+
+<h3>Cafe24 Ssurround</h3>
+<p>Used under the Cafe24 free font license. Copyright belongs to Cafe24 Corp. and the font may be used freely.</p>
+
+<!-- ============ UI Components (MIT) ============ -->
+<h2>3. UI Components (MIT License)</h2>
+<p>Some button and checkbox designs are Flutter re-implementations of open source components from <a href="https://uiverse.io">Uiverse.io</a>.</p>
+<ul>
+  <li>Button design — © sahilxkhadka (<a href="https://uiverse.io/sahilxkhadka">uiverse.io/sahilxkhadka</a>)</li>
+  <li>Checkbox design — © Praashoo7 (<a href="https://uiverse.io/Praashoo7">uiverse.io/Praashoo7</a>)</li>
+</ul>
+<p>These components are used under the MIT License.</p>
+<pre>MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</pre>
+
+<!-- ============ Software Packages ============ -->
+<h2>4. Software Packages</h2>
+<p>Poptape uses the following open source packages.</p>
+
+<h3>BSD-3-Clause License</h3>
+<p class="muted">Flutter SDK, camera, video_player, path_provider, crypto, google_sign_in, url_launcher, package_info_plus, sensors_plus, connectivity_plus, share_plus</p>
+
+<h3>MIT License</h3>
+<p class="muted">supabase_flutter (including postgrest, gotrue, storage, realtime, functions_client), sign_in_with_apple, app_links, gal, cupertino_icons</p>
+
+<p>The full license list for these packages and their transitive dependencies is also available in the app under <strong>Settings → About → Licenses</strong>.</p>
+
+<!-- ============ Assets ============ -->
+<h2>5. Images and Other Assets</h2>
+<ul>
+  <li>Avatars, the logo, the app icon, stickers, and texture images were created in-house by Poptape.</li>
+  <li>Color-processing research referenced the ntsc-rs (ISC/MIT) project. (No code from it is included.)</li>
+</ul>
+
+<p class="muted" style="margin-top:40px;">Contact: <a href="mailto:studiofilm.app@gmail.com">studiofilm.app@gmail.com</a></p>
+
+</div>
+</body>
+</html>
