@@ -25,12 +25,13 @@
   .muted { color: #777; font-size: 0.9rem; }
   .lang { text-align: right; margin: 0 0 8px; }
   .notice { background: #fff; border: 1px solid #e5e5e5; border-radius: 8px; padding: 10px 14px; font-size: 0.88rem; color: #555; margin: 1rem 0 1.5rem; }
+  .note { background: #f4f4f5; border-left: 3px solid #c4c4c8; padding: 8px 12px; margin: 0.6rem 0; }
 </style>
 </head>
 <body>
 <p class="lang"><a href="privacy.html">한국어</a></p>
 <h1>Moafilm Privacy Policy</h1>
-<p><strong>Effective date: June 14, 2026</strong><br><span class="muted">Last updated: June 14, 2026</span></p>
+<p><strong>Effective date: June 14, 2026</strong><br><span class="muted">Last updated: July 11, 2026</span></p>
 <p class="notice">This is an English translation of the Korean original provided for convenience. If the two versions conflict, the Korean version prevails.</p>
 <p>Moafilm (the "Service") values your personal information and complies with applicable laws, including the Personal Information Protection Act of the Republic of Korea. This Privacy Policy explains what personal information the Service collects and uses, and how it is protected.</p>
 
@@ -40,10 +41,10 @@ Contact email: <a href="mailto:studiofilm.app@gmail.com">studiofilm.app@gmail.co
 <p>The Service is operated by an individual; separate business registration information does not apply.</p>
 
 <h2>2. Children Under 14</h2>
-<p>The Service is available only to persons aged 14 or older. The Service does not collect personal information from children under 14, and if a user is found to be under 14, the account and its information are deleted without delay. By signing up, you are deemed to confirm that you are 14 or older.</p>
+<p>The Service is available only to persons aged 14 or older. The Service does not collect personal information from children under 14, and if a user is found to be under 14, the account and its information are deleted without delay. By signing up, you are deemed to confirm that you are 14 or older. (The Service is likewise not directed to children under 13 for the purposes of the U.S. Children's Online Privacy Protection Act.)</p>
 
 <h2>3. Personal Information We Collect</h2>
-<p>The Service collects the following personal information.</p>
+<p>The Service collects the following personal information. We collect only the minimum information necessary, and do not collect items not listed below (such as contacts, location, or biometric data).</p>
 <h3>A. When you sign up and sign in (social login)</h3>
 <p>When you sign in with an Apple or Google account, we receive the following from that provider.</p>
 <ul>
@@ -56,19 +57,21 @@ Contact email: <a href="mailto:studiofilm.app@gmail.com">studiofilm.app@gmail.co
 <ul>
   <li>Videos (Pops) you record and upload, and their metadata (time of recording, length, etc.)</li>
   <li>Room creation and participation details, friend invitations and join records</li>
-  <li>Service usage records and access logs (for operating the Service and analyzing errors)</li>
 </ul>
-<h3>C. Automatically collected information</h3>
+<h3>C. Automatically or incidentally collected technical information</h3>
 <ul>
-  <li>Technical information such as device information, app version, and OS version (for compatibility and error diagnosis)</li>
+  <li>Authentication and security information: during sign-in and session authentication, our authentication infrastructure (Supabase Auth) may automatically record your connecting IP address and browser/device identifier string (User-Agent) for sign-in security and fraud prevention.</li>
+  <li>Feedback information: only when you send in-app feedback, your app version and platform (iOS/Android) are stored together with your message. This is not collected continuously, but only when you choose to submit feedback.</li>
 </ul>
+<p>The Service does not use any separate usage-analytics, advertising, or crash-collection tools (SDKs), and does not track device information, location, or usage behavior beyond what is stated above.</p>
 
 <h2>4. Purposes of Collection and Use</h2>
 <ul>
   <li>Identifying members, sign-in, and account management</li>
   <li>Storing videos (Pops), keeping them in Rooms, and revealing (developing) them at the set time</li>
   <li>Providing friend invitations and group Room features</li>
-  <li>Operating and maintaining the Service, responding to errors and inquiries</li>
+  <li>Operating and maintaining the Service and responding to inquiries</li>
+  <li>Ensuring the safety of the Service and preventing misuse</li>
   <li>Fulfilling legal obligations</li>
 </ul>
 
@@ -92,6 +95,9 @@ Contact email: <a href="mailto:studiofilm.app@gmail.com">studiofilm.app@gmail.co
 <p>Each processor handles information under its own privacy policy.</p>
 
 <h2>7. Overseas Processing (Transfer) of Personal Information</h2>
+<h3>A. Where your data is stored</h3>
+<p>The Service's data storage infrastructure (Supabase) is processed in the Republic of Korea (Seoul) region. This means that even if you use the Service from outside the Republic of Korea (for example, in the United States or Europe), your account information and uploaded videos are stored and processed on servers located in the Republic of Korea (Seoul).</p>
+<h3>B. Overseas transfer for social login authentication</h3>
 <p>The Service uses the authentication systems of Apple Inc. and Google LLC (located in the United States) for social sign-in. If you choose social sign-in, your personal information may be processed overseas under that provider's policy during authentication.</p>
 <ul>
   <li>Recipients: Apple Inc., Google LLC</li>
@@ -101,7 +107,6 @@ Contact email: <a href="mailto:studiofilm.app@gmail.com">studiofilm.app@gmail.co
   <li>Purpose of use: identity verification</li>
   <li>Retention and use period: per each provider's privacy policy</li>
 </ul>
-<p>The data storage infrastructure (Supabase) is processed in the Republic of Korea (Seoul) region.</p>
 
 <h2>8. Group Rooms (Sharing with Friends)</h2>
 <p>In a Room you make together with invited friends (a group Room), the following may be revealed to the other members of the same Room.</p>
@@ -110,29 +115,56 @@ Contact email: <a href="mailto:studiofilm.app@gmail.com">studiofilm.app@gmail.co
   <li>Videos you uploaded to that Room (after the Room is revealed / developed)</li>
 </ul>
 <p>Until the Room is revealed (developed) at the set time, the contents of your videos are not shown to other members. Please check the sharing scope before joining a Room or uploading videos.</p>
+<p class="note"><strong>Nature of shared content:</strong> A developed Film is a shared result that combines the videos of several members into one. Therefore, if you later delete your own video or delete your account, that video may not be removed from a Film that has already been developed and revealed to other members.</p>
 
-<h2>9. Your Rights and How to Exercise Them</h2>
+<h2>9. No Advertising, Tracking, or Sale of Personal Information</h2>
+<p>The Service does not do any of the following.</p>
+<ul>
+  <li>We do not display advertisements.</li>
+  <li>We do not track your usage behavior or use third-party tracking tools for that purpose.</li>
+  <li>We do not sell your personal information to third parties.</li>
+  <li>We do not use your content, such as your videos, to train artificial intelligence (AI).</li>
+</ul>
+
+<h2>10. About Operator Access to Content</h2>
+<p>The Service is not end-to-end encrypted. Accordingly, the operator may access your content to the extent necessary to provide the Service (storage, developing, transmission), to ensure the safety of the Service and respond to misuse, to handle reports, and to fulfill legal obligations. However, the operator does not use such access for any secondary purpose unrelated to providing the Service, such as marketing, advertising, or AI training.</p>
+
+<h2>11. Your Rights and How to Exercise Them</h2>
 <p>You may exercise the following rights at any time.</p>
 <ul>
   <li>Request to access, correct, or delete your personal information</li>
   <li>Request to suspend the processing of your personal information</li>
+  <li>Withdraw your consent to the collection and use of your personal information</li>
   <li>Delete your account</li>
 </ul>
 <p>You can exercise these rights in the app's settings or via <a href="mailto:studiofilm.app@gmail.com">studiofilm.app@gmail.com</a>, and the Service will act without delay in accordance with applicable law.</p>
 
-<h2>10. Security Measures</h2>
+<h2>12. Legal Bases for Processing (EEA / UK)</h2>
+<p>If you are located in the European Economic Area (EEA) or the United Kingdom, we process your personal information on the following legal bases under the GDPR / UK GDPR.</p>
+<ul>
+  <li><strong>Performance of a contract:</strong> to provide the Service you request (account, storing and developing videos, group Rooms).</li>
+  <li><strong>Consent:</strong> where you have given consent, such as when submitting feedback; you may withdraw consent at any time.</li>
+  <li><strong>Legitimate interests:</strong> to keep the Service secure and prevent misuse, to the extent not overridden by your rights.</li>
+  <li><strong>Legal obligation:</strong> to comply with applicable law.</li>
+</ul>
+<p>You have the right to access, rectify, erase, restrict, or object to processing, and to data portability, and you may lodge a complaint with your local data protection authority.</p>
+
+<h2>13. California Privacy Rights (CCPA / CPRA)</h2>
+<p>We do not sell or share your personal information as those terms are defined under the California Consumer Privacy Act (CCPA/CPRA), and we have not done so. If you are a California resident, you have the right to know what personal information we collect, to request access to or deletion of that information, and not to be discriminated against for exercising these rights. To make a request, contact <a href="mailto:studiofilm.app@gmail.com">studiofilm.app@gmail.com</a>.</p>
+
+<h2>14. Security Measures</h2>
 <ul>
   <li>Restricting access to personal information and controlling database access (row-level security)</li>
   <li>Encrypting communications (HTTPS)</li>
   <li>Blocking access to videos before their reveal time</li>
 </ul>
 
-<h2>11. Privacy Officer</h2>
+<h2>15. Privacy Officer</h2>
 <p>Privacy officer: the Moafilm operator<br>
 Contact: <a href="mailto:studiofilm.app@gmail.com">studiofilm.app@gmail.com</a></p>
 <p>Inquiries, complaints, and requests for remedy regarding personal information can be submitted to the contact above. For reports or counseling about privacy infringements in Korea, you may also contact the Personal Information Infringement Report Center (<a href="https://privacy.kisa.or.kr" target="_blank" rel="noopener">privacy.kisa.or.kr</a>, dial 118 in Korea).</p>
 
-<h2>12. Changes to This Privacy Policy</h2>
+<h2>16. Changes to This Privacy Policy</h2>
 <p>This policy may be revised in line with changes to the law or the Service, and any changes will be announced in the app or on this page.</p>
 
 <hr />
